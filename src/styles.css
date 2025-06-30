@@ -196,29 +196,56 @@ button:hover {
 }
 
 /* CARDS */
-.service-card,
-.stats div,
-.metrics div {
-  background-color: var(--white);
-  padding: 2rem 1.5rem;
+.service-card {
+  padding: 2rem;
   border-radius: var(--radius);
+  background: var(--white);
   box-shadow: var(--shadow);
-  text-align: center;
-  transition: transform 0.2s ease;
-  border-top: 4px solid transparent;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  border-top: 4px solid var(--orange);
-  box-shadow: 0 0 10px rgba(255, 106, 0, 0.2);
+  text-align: left;
 }
 
 .service-card h3 {
   margin-top: 1rem;
-  font-size: 1.2rem;
   color: var(--orange);
+  font-size: 1.25rem;
 }
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.service-list li {
+  margin: 0.4rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  color: var(--black);
+}
+
+.service-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-size: 0.85rem;
+}
+
+.service-toggle {
+  background: none;
+  border: none;
+  color: var(--orange);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.service-toggle:hover {
+  text-decoration: underline;
+}
+
 
 /* STATS */
 .stats {
