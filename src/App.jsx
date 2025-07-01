@@ -6,10 +6,12 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import MetricsPage from './pages/MetricsPage';
 import ContactPage from './pages/ContactPage';
+import BackToTopButton from './components/BackToTopButton';
 
 const App = () => {
   return (
     <>
+      < div className="top" />
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -19,6 +21,7 @@ const App = () => {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
+      <BackToTopButton />
     </>
   );
 };

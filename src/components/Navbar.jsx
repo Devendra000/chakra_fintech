@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar" data-aos="fade-down">
+    <nav className="navbar">
       <div className="navbar-brand">CHAKRA</div>
 
       <div className="menu-icon" onClick={toggleNav}>
