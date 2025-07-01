@@ -5,6 +5,7 @@ import App from './App';
 import './styles.css';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import ScrollToTop from './components/scrollToTop';
 
 // Initialize AOS scroll animations
 AOS.init({
@@ -17,6 +18,7 @@ AOS.init({
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>
