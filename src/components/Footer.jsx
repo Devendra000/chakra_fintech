@@ -24,8 +24,8 @@ const Footer = () => {
 
         <div className="footer-contact">
           <h4>Contact</h4>
-          <p>Email: hello@chakra.com</p>
-          <p>Phone: +977-9800000000</p>
+          <p>Email: <a href="mailto:info@chakrabeaconfinances.com">info@chakrabeaconfinances.com</a></p>
+          <p>Phone: <a href="tel:+97798000000">+977-9866223309</a></p>
           <div className="footer-social">
             <a href="#"><FaFacebookF /></a>
             <a href="#"><FaLinkedinIn /></a>
