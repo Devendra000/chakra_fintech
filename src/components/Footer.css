@@ -1,0 +1,147 @@
+:root {
+  --orange: #ff6a00;
+  --text-dark: #222;
+  --text-mid: #555;
+  --text-light: #888;
+  --bg-light: #f9f9f9;
+  --divider: #e0e0e0;
+}
+
+.footer {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  padding: 3rem 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid var(--divider);
+}
+
+/* === Grid Layout === */
+.footer-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* === Logo Top-Left Section === */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-logo img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-fallback {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--orange);
+  margin: 0;
+  padding: 0;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* === Navigation Columns === */
+.footer-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: var(--text-mid);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: var(--orange);
+}
+
+.footer-column p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.footer-social a {
+  font-size: 1.2rem;
+  color: var(--text-mid);
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: var(--orange);
+}
+
+/* === Bottom Strip === */
+.footer-bottom {
+  border-top: 1px solid var(--divider);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-sections {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

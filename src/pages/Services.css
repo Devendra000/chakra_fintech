@@ -1,0 +1,608 @@
+/* General Section Styling */
+.services-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+}
+
+/* Title */
+.services-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 4px solid #f97316;
+  padding-bottom: 12px;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1280px;
+  width: 100%;
+}
+
+/* Service Card */
+.service-card {
+  background: #ffffff;
+  border: 3px solid #f97316;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px; /* Ensure consistent height */
+}
+
+/* Hover Shine Effect */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #ea580c;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(249, 115, 22, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.service-card:hover::before {
+  top: 100%;
+  left: 100%;
+}
+
+/* Icon */
+.service-icon-wrapper {
+  margin-bottom: 25px;
+}
+
+.service-icon {
+  color: #f97316;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Card Content */
+.service-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.service-subtext {
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Feature Container */
+.feature-container {
+  flex: 1; /* Push content below to bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.feature-item {
+  font-size: 1rem;
+  color: #000000;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+.feature-check {
+  color: #f97316;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  color: #ffffff;
+}
+
+/* Highlight Tags */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.highlight-tag {
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.highlight-tag:hover {
+  transform: scale(1.1);
+}
+
+/* Specific Highlight Colors */
+.audit-ready {
+  background: #f97316;
+}
+
+.audit-ready:hover {
+  background: #ea580c;
+}
+
+.reliable {
+  background: #3b82f6;
+}
+
+.reliable:hover {
+  background: #2563eb;
+}
+
+.ai-enhanced {
+  background: #14b8a6;
+}
+
+.ai-enhanced:hover {
+  background: #0d9488;
+}
+
+.live-reporting, .responsive, .secure {
+  background: #4b5563;
+}
+
+.live-reporting:hover, .responsive:hover, .secure:hover {
+  background: #374151;
+}
+
+/* CTA Button */
+.cta-btn {
+  background: #14b8a6;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: auto; /* Align at bottom */
+}
+
+.cta-btn:hover {
+  background: #0d9488;
+  transform: scale(1.05);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 60px;
+  max-width: 1200px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+/* Modal Close Button */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 10px;
+}
+
+.modal-close:hover {
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 50%;
+}
+
+/* Modal Title and Subtext */
+.modal-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-subtext {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-bottom: 35px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Modal Packages Grid */
+.modal-packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Package Card */
+.package-card {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-width: 280px;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Recommended Badge */
+.recommended-badge {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f97316;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.recommended-badge:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Package Tiers and Pricing */
+.package-tier {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.package-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.basic-price {
+  color: #f97316;
+}
+
+.medium-price {
+  color: #14b8a6;
+}
+
+.premium-price {
+  color: #8b5cf6;
+}
+
+/* Package Features */
+.package-features {
+  list-style: none;
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+
+.package-features .feature-item {
+  font-size: 1.1rem;
+  color: #000000;
+  margin: 12px 0;
+  line-height: 1.7;
+}
+
+/* Package Button */
+.package-btn {
+  background: #f97316;
+  color: #ffffff;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.package-btn:hover {
+  background: #ea580c;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .modal-packages {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .modal-content {
+    padding: 50px;
+  }
+
+  .modal-title {
+    font-size: 2.3rem;
+  }
+
+  .modal-subtext {
+    font-size: 1.2rem;
+  }
+
+  .package-tier {
+    font-size: 1.7rem;
+  }
+
+  .package-price {
+    font-size: 1.4rem;
+  }
+
+  .package-features .feature-item {
+    font-size: 1rem;
+  }
+
+  .package-btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .service-card {
+    padding: 25px;
+    min-height: 400px;
+  }
+
+  .service-title {
+    font-size: 1.9rem;
+  }
+
+  .service-subtext {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .feature-item {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 40px;
+  }
+
+  .modal-packages {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .modal-title {
+    font-size: 2.1rem;
+  }
+
+  .modal-subtext {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .modal-close {
+    font-size: 2.2rem;
+    padding: 8px;
+  }
+
+  .package-card {
+    min-width: auto;
+    padding: 25px;
+  }
+
+  .package-tier {
+    font-size: 1.6rem;
+  }
+
+  .package-price {
+    font-size: 1.3rem;
+  }
+
+  .package-features .feature-item {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .package-btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 60px 15px;
+  }
+
+  .services-title {
+    font-size: 2.2rem;
+  }
+
+  .service-card {
+    padding: 20px;
+    min-height: 380px;
+  }
+
+  .service-title {
+    font-size: 1.7rem;
+  }
+
+  .service-subtext {
+    font-size: 1rem;
+  }
+
+  .feature-item {
+    font-size: 0.95rem;
+  }
+
+  .highlight-tag {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .modal-content {
+    padding: 30px;
+  }
+
+  .modal-title {
+    font-size: 1.9rem;
+  }
+
+  .modal-subtext {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .modal-close {
+    font-size: 2rem;
+    padding: 6px;
+  }
+
+  .package-card {
+    padding: 20px;
+  }
+
+  .package-tier {
+    font-size: 1.5rem;
+  }
+
+  .package-price {
+    font-size: 1.2rem;
+  }
+
+  .package-features .feature-item {
+    font-size: 0.95rem;
+  }
+
+  .package-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .recommended-badge {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+  }
+}

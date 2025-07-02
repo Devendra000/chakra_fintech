@@ -1,0 +1,132 @@
+[
+  {
+    "id": "test",
+    "title": "Test",
+    "subtext": "Certified Test Experts",
+    "icon": "FaFileInvoice",
+    "highlights": ["Audit Ready", "Reliable"],
+    "packages": {
+      "Basic": {
+        "price": "$49/mo",
+        "features": [
+          "Bookkeeping",
+          "Tax Filing (Annual)",
+          "Bookkeeping",
+          "Tax Filing (Annual)",
+          "Bookkeeping",
+          "Tax Filing (Annual)",
+          "Bookkeeping",
+          "Tax Filing (Annual)",
+          "Bank Reconciliation"
+        ]
+      },
+      "Medium": {
+        "price": "$89/mo",
+        "features": [
+          "Monthly Reports",
+          "Tax Planning",
+          "Ledger Management"
+        ],
+        "recommended": true
+      },
+      "Premium": {
+        "price": "$129/mo",
+        "features": [
+          "Full Accounting Suite",
+          "Dedicated CPA",
+          "Quarterly Audit Reviews"
+        ]
+      }
+    }
+  },
+  {
+    "id": "accounting",
+    "title": "Accounting",
+    "subtext": "Certified Financial Experts",
+    "icon": "FaFileInvoice",
+    "highlights": ["Audit Ready", "Reliable"],
+    "packages": {
+      "Basic": {
+        "price": "$49/mo",
+        "features": [
+          "Bookkeeping",
+          "Tax Filing (Annual)",
+          "Bank Reconciliation"
+        ]
+      },
+      "Medium": {
+        "price": "$89/mo",
+        "features": [
+          "Monthly Reports",
+          "Tax Planning",
+          "Ledger Management"
+        ],
+        "recommended": true
+      },
+      "Premium": {
+        "price": "$129/mo",
+        "features": [
+          "Full Accounting Suite",
+          "Dedicated CPA",
+          "Quarterly Audit Reviews"
+        ]
+      }
+    }
+  },
+  {
+    "id": "finance",
+    "title": "Finance & Insights",
+    "subtext": "Real-Time Data Analysis",
+    "icon": "FaChartBar",
+    "highlights": ["AI Enhanced", "Live Reporting"],
+    "packages": {
+      "Basic": {
+        "price": "$59/mo",
+        "features": ["2 Reports/Month", "Email Support"]
+      },
+      "Medium": {
+        "price": "$99/mo",
+        "features": ["Weekly Reports", "Trend Forecasting", "Live Chat"],
+        "recommended": true
+      },
+      "Premium": {
+        "price": "$149/mo",
+        "features": [
+          "Custom Dashboards",
+          "Dedicated Analyst",
+          "24/7 Priority Support"
+        ]
+      }
+    }
+  },
+  {
+    "id": "it",
+    "title": "IT Development",
+    "subtext": "Custom Engineering Solutions",
+    "icon": "FaCode",
+    "highlights": ["Responsive", "Secure"],
+    "packages": {
+      "Basic": {
+        "price": "$199 (one-time)",
+        "features": ["Landing Page", "Basic Hosting Setup"]
+      },
+      "Medium": {
+        "price": "$499 (one-time)",
+        "features": [
+          "Multi-page Website",
+          "API Integration",
+          "CMS Setup"
+        ],
+        "recommended": true
+      },
+      "Premium": {
+        "price": "$999 (one-time)",
+        "features": [
+          "Full-Stack Web App",
+          "PWA Integration",
+          "Ongoing Support"
+        ]
+      }
+    }
+  }
+]
